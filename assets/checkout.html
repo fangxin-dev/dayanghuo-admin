@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+  <head>
+    <title>大洋货.管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload-ui.css">
+    <link rel="stylesheet" href="/styles/dayanghuo.css">
+  </head>
+  <body ng-app="dayanghuo.product" data-ng-controller="ProductCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><font color="white">大洋货.管理</font></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">业务<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="order.html">订单</a></li>
+              <li><a href="shipment.html">发货</a></li>
+              <li><a href="payment.html">付款</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="product.html">产品</a></li>
+              <li><a href="category.html">分类</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="loader" data-ng-init="init()" data-ng-hide="1">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="demo">
+          </div>
+          <div class="page-header">
+            <h1>产品</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="form-group row">
+                  <div class="col-sm-10">
+                      <select id="s1" class="span2 form-control" required></select>
+                  </div>
+            </div>
+            <div class="form-group row">
+                  <div class="col-sm-10">
+                      <select id="s2" class="span2 form-control" required></select>
+                  </div>
+            </div>
+            <div class="form-group row">
+                  <div class="col-sm-10">
+                      <select id="s3" class="span2 form-control" required></select>
+                  </div>
+            </div>
+
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group" role="group">
+           <!--  <input type="button" class="btn" data-ng-hide="edit" data-ng-click="edit=!edit" value="Edit">
+            <input type="button" class="btn btn-primary" data-ng-show="edit" data-ng-click="edit=!edit" value="Done"> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.4.9/angular.min.js"></script>
+    <script src="/controllers/product.js"></script>
+    <script src="/js/geo.js"></script>
